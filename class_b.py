@@ -25,11 +25,20 @@ class Point2D:
     @y.setter
     def y(self, new_y):
         if type(new_y) in (int, float):
-            self.__y == new_y
+            self.__y = new_y
         else:
             self.__y = 1 # sensible default (could raise an exception)
+    # we can override the built-in method __str__
+    def __str__(self):
+        '''The __str__ method is ALWAYS used by 'print()' '''
+        # return str((self.x, self.y)) # a tuple calling the getter methods
+        # we can use string formatting syntax
+        return f'Point x={self.x} y={self.y}' # curly-brackets inject valuess
 
 if __name__ == '__main__':
     '''we can make instances of our class'''
-    t = Point2D(False, 4) 
+    t = Point2D(True, 4) 
     print(t.x) # this will call the function that gets 'x'
+    # if we REALLY need to we CAN access name-mangled properties
+    # print( t.__class__.__x )
+    print(t) # this must call the __str__ method
