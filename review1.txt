@@ -1,8 +1,8 @@
-Python OOP Review Exercise 1
+Python OOP Review Exercise 1 (until about 2:45)
 ============================
 In a new module write a class called 'NumberFun' with one property
 This property will be validated as a positive integer
-Write decorated methods to get and set the property
+Write decorated methods (@property) to get and set the property
 Invalid entries should default to 1
 Use 'name-mangling' for the actual property
 
