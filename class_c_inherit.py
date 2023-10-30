@@ -24,6 +24,8 @@ class Point3D(Point2D): # inherit from Point2D
         msg = super().__str__()
         return f'{msg} z={self.z}'
 
+print(__name__) # we try not to polute the global namespace
+
 if __name__ == '__main__':
     # ''' we have access to everything inside 'class_b' '''
     '''we have access to the Point2D class'''
