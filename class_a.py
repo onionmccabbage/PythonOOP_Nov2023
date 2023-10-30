@@ -7,8 +7,8 @@ class Point:
     # every method that belongs to a class MUST take 'self' as an argument
     def __init__(self, new_x, new_y): # this is the initializer for our class
         # in classes we typically use 'name mangling' __x
-        self.__x = new_x # we are setting the property of the isntance to the incoming value
-        self.__y = new_y
+        self.x = new_x # we are setting the property of the isntance to the incoming value
+        self.y = new_y # this will call the setter for y
     # here are some more methods of this class (a method is simple a function that is inside a class)
     def set_x(self, new_x): # setter or mutator
         '''check to make sure new_x is a number'''
@@ -42,3 +42,8 @@ if __name__ == '__main__':
     print(p2.x) # 99.0 access the value of x using the getter method
     print(p1.x, p1.y) # dot notation
     # print(p2[x], p2['y']) # square-bracket notation - fix this...
+    # we can ask the user for values for the x and y
+    x = input('Value of x? ') # every user input is ALWAYS a string
+    y = input('Value of y? ')
+    p3 = Point(x, y)
+    print( p3.x, p3.y )
