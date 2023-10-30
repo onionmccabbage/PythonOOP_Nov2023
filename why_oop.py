@@ -18,3 +18,6 @@ my_set = {1,2,3,3,3,5,'hello', 'hello'} # collection of unique members
 print(my_set)
 # dictionary
 d = {'x':3, 'y':4} # a non-indexed mutable collection of key:value pairs
+
+x = tuple()
+y = list()
