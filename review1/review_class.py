@@ -10,6 +10,7 @@ It is {self.findIfSquareNum()}''' # use the accessors
     def findSqrt(self):
         return self.__num ** 0.5
     def findEvenOdd(self):
+        # Python has a one-line ternary operator
         return 'even' if self.num%2 == 0 else 'odd'
     def findIfSquareNum(self):
         r = self.findSqrt()

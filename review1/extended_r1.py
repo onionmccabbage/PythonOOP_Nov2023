@@ -12,7 +12,6 @@ class ExtendedNumberFun(NumberFun):
             return txt + f'\nClass dictionary contains {d}'
         else:
             return txt
-    
 
 if __name__ == '__main__':
     r = ExtendedNumberFun(100, True)
