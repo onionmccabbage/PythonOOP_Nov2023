@@ -1,2 +1,53 @@
 Python Object Oriented Programming
 ==================================
+
+Toby Dussek 
+
+9:30  start
+11:00 coffee
+12:30 lunch
+3:00  tea
+4:30  end
+
+Code Repo
+https://github.com/onionmccabbage/PythonOOP_Nov2023
+
+You will need:
+- a copy of Python 3.x
+- an editor (e.g. VS Code, PyCharm etc.)
+- internet, able to install python libraries (e.g. requests library)
+
+Python code lives in classes (or in functions), in modules, which live in packages (folders)
+
+- intro and welcome
+  - what do you currently know
+  - what do you want to know
+-	Overview of terms and ideas: The jargon of OOP
+-	OOP thinking: Where OOP is useful and used
+-	Efficiency Gains from OOP
+-	Why OOP is so popular:
+  -	Modular code advantages
+  -	Working across teams
+-	What is meant by an Object: Objects, properties and method
+-	Common approaches to developing Objects
+-	Data Types: Ensuring compliance to expectations
+-	Data collections and structures
+-	Inheritance and Implementation: How objects can inherit
+-	Constructor and super
+-	Implementing an interface
+-	Encapsulation
+-	Restricting direct access to object components
+-	Getter and Setter patterns
+-	Mutability
+-	More OOP Concepts
+-	Polymorphism
+-	Duck Typing
+
+Other Useful Resources
+- https://pynative.com/python-exercises-with-solutions/
+- https://realpython.com/
+- https://python-patterns.guide/
+- https://www.geeksforgeeks.org/python-exercises-practice-questions-and-solutions/
+- https://www.practicepython.org/exercises/
+- https://www.learnpython.org/
+
