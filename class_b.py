@@ -34,6 +34,12 @@ class Point2D:
         # return str((self.x, self.y)) # a tuple calling the getter methods
         # we can use string formatting syntax
         return f'Point x={self.x} y={self.y}' # curly-brackets inject valuess
+    # we can derive values 
+    def hypot(self):
+        '''Return the hypotenuse given z and y
+        h=(x*x+y*y)**0.5'''
+        h = (self.x**2 + self.y**2)**0.5
+        return h # we choose not to persist h, since it can always be derived
 
 if __name__ == '__main__':
     '''we can make instances of our class'''
@@ -42,3 +48,6 @@ if __name__ == '__main__':
     # if we REALLY need to we CAN access name-mangled properties
     # print( t.__class__.__x )
     print(t) # this must call the __str__ method
+    # find th hypot
+    q = Point2D(3,4)
+    print( q.hypot() ) # 5.0
