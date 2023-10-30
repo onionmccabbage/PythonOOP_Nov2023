@@ -12,6 +12,7 @@ class Point:
     # here are some more methods of this class (a method is simple a function that is inside a class)
     def set_x(self, new_x): # setter or mutator
         '''check to make sure new_x is a number'''
+        # careful 'isnumeric' does NOT allow - sign for numbers
         if (new_x.isnumeric()): # careful isnumeric only checks string values  # type(new_x)==float
             self.__x = float(new_x) # cast teh string to a floating point value
         else:
@@ -35,8 +36,8 @@ if __name__ == '__main__':
     # We can access intrinstic properties of any class
     print( Point.__doc__  ) # print the docstring
     # make instances of our class
-    p1 = Point(3,4) # p1 is now an instance of the class
-    p2 = Point(True, False) # every time we make an isntance, the __init__ is called
+    p1 = Point('3', '4') # p1 is now an instance of the class
+    p2 = Point('3', '6') # every time we make an isntance, the __init__ is called
     # we call methods of a class like this (note the brackets)
     p2.x = '99' # set by using the setter method
     print(p2.x) # 99.0 access the value of x using the getter method
@@ -47,3 +48,9 @@ if __name__ == '__main__':
     y = input('Value of y? ')
     p3 = Point(x, y)
     print( p3.x, p3.y )
+
+
+    # a property always looks like this
+    p1.x # no brackets
+    # a method always looks like this
+    p1.get_x() # not the brackets
