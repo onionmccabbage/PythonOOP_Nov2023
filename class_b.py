@@ -10,7 +10,7 @@ class Point2D:
     @property # this is a simple way to make a function behave like a property
     def x(self):
         '''we could check that this environment is permitted to access __x'''
-        return self.__x
+        return self.__x # this can be referred to as _Point2D__x
     @x.setter
     def x(self, new_x):
         '''only allow valid numbers for x'''
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     '''we can make instances of our class'''
     t = Point2D(True, 4) 
     # try square-bracket access
-    print(t['x'])
+    print(f'If we implement __getitem__() we can use square bracket syntax: {t["x"]}')
     print(t.x) # this will call the function that gets 'x'
     # if we REALLY need to we CAN access name-mangled properties
     # the pattern is always ._ClassName__prop
