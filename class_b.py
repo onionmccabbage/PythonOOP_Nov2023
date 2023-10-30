@@ -40,13 +40,19 @@ class Point2D:
         h=(x*x+y*y)**0.5'''
         h = (self.x**2 + self.y**2)**0.5
         return h # we choose not to persist h, since it can always be derived
+    def __getitem__(self, item): # emulate square-bracket syntax
+        '''allow square-bracket access to class members'''
+        return self.__dict__['_Point2D__x']
 
 if __name__ == '__main__':
     '''we can make instances of our class'''
     t = Point2D(True, 4) 
+    # try square-bracket access
+    print(t['x'])
     print(t.x) # this will call the function that gets 'x'
     # if we REALLY need to we CAN access name-mangled properties
-    # print( t.__class__.__x )
+    # the pattern is always ._ClassName__prop
+    print( f'We CAN access directly: {t._Point2D__x}' )
     print(t) # this must call the __str__ method
     # find th hypot
     q = Point2D(3,4)
