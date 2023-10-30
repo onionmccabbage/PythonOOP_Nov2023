@@ -18,8 +18,17 @@ class Point:
             raise TypeError() # or we could set a default
     def get_x(self): # getter or accessor
         return self.__x
+    def set_y(self, new_y): # setter or mutator
+        '''check to make sure new_y is a number'''
+        if (new_y.isnumeric()): # careful isnumeric only checks string values  # type(new_x)==float
+            self.__y = float(new_y) # cast teh string to a floating point value
+        else:
+            raise TypeError() # or we could set a default
+    def get_y(self): # getter or accessor
+        return self.__y   
     # we can make these get/set methods behave like properties
-    x = property(get_x, set_x)
+    x = property(get_x, set_x) # makes the functinos behave as properties
+    y = property(get_y, set_y)
 
 # __xxx__ is known as dunder
 if __name__ == '__main__':
@@ -29,7 +38,7 @@ if __name__ == '__main__':
     p1 = Point(3,4) # p1 is now an instance of the class
     p2 = Point(True, False) # every time we make an isntance, the __init__ is called
     # we call methods of a class like this (note the brackets)
-    p2.set_x('99')
-    print(p2.__x) # 99.0
-    print(p1.__x, p1.y) # dot notation
+    p2.x = '99' # set by using the setter method
+    print(p2.x) # 99.0 access the value of x using the getter method
+    print(p1.x, p1.y) # dot notation
     # print(p2[x], p2['y']) # square-bracket notation - fix this...
