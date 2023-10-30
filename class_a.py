@@ -4,18 +4,27 @@
 class Point:
     """This class will encapsulate a point in 2-d space
     x will be a number, y will also be a number"""
-    # every method that belongs to a classMUST take 'self' as an argument
+    # every method that belongs to a class MUST take 'self' as an argument
     def __init__(self, new_x, new_y): # this is the initializer for our class
         self.x = new_x # we are setting the property of the isntance to the incoming value
         self.y = new_y
+    # here are some more methods of this class (a method is simple a function that is inside a class)
+    def set_x(self, new_x):
+        '''check to make sure new_x is a number'''
+        if (new_x.isnumeric()): # careful isnumeric only checks string values  # type(new_x)==float
+            self.x = float(new_x) # cast teh string to a floating point value
+        else:
+            raise TypeError() # or we could set a default
 
 # __xxx__ is known as dunder
 if __name__ == '__main__':
     # We can access intrinstic properties of any class
     print( Point.__doc__  ) # print the docstring
-
     # make instances of our class
     p1 = Point(3,4) # p1 is now an instance of the class
-    p2 = Point(-3, -4) # every time we make an isntance, the __init__ is called
+    p2 = Point(True, False) # every time we make an isntance, the __init__ is called
+    # we call methods of a class like this (note the brackets)
+    p2.set_x('99')
+    print(p2.x) # 99.0
     print(p1.x, p1.y) # dot notation
     # print(p2[x], p2['y']) # square-bracket notation - fix this...
