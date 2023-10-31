@@ -6,7 +6,7 @@ class Animal():
     def makeANoise(self):
         pass
 
-# here are some animals
+# here are some animals (usually each class is in a separate module)
 class Dog(Animal):
     '''Dogs go 'woof' '''
     def makeANoise(self):

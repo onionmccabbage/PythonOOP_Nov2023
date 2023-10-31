@@ -1,6 +1,6 @@
 # a facade brings together disparate entities
 
-# here is a bunch of classes
+# here is a bunch of classes (would be better in their own modules)
 class Coder():
     '''creates code to solve problems'''
     def __init__(self):
@@ -61,6 +61,8 @@ class Client():
         self.manager.arrange()
     def __del__(self): # every class in Python will run __del__ when it finishes
         print('all done')
+    def __exit__(self):
+        pass
 
 if __name__ == '__main__':
     '''a facade can make ugly stuff easier to look at'''
