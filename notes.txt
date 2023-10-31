@@ -26,6 +26,7 @@ Tuesday
 - requests (needs setting up)
 - lab exercise
 - sys and arguments
+- decorator pattern
 
 
 
