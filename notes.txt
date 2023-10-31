@@ -27,6 +27,7 @@ Tuesday
 - lab exercise
 - sys and arguments
 - decorator pattern
+- ways to run python
 
 
 
