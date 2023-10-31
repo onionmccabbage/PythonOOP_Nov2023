@@ -1,0 +1,13 @@
+Here are some common design patterns
+====================================
+- Builder
+- Singleton
+- Constructor
+- Factory
+- Facade
+- Observer
+- Stateful
+
+Design patterns vcapture common recipes
+
+Anti-pattern is a well known thing to avoid

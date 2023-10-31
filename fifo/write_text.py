@@ -15,7 +15,7 @@ def writeToFile(t):
     '''a more controlled approach to writing files
     NB it is always a good idea to catch potential exceptions'''
     try: # any exceptions can be caught
-        fout   = open('log.txt', 'x') # file access object
+        fout   = open('log.txt', 'a') # file access object
         size   = len(t) # NB all strings of text have a len()
         offset = 0
         chunk  = 12 # choose twelve characters at a time
@@ -39,3 +39,4 @@ if __name__ == '__main__':
     # printToFile(text)
     text = 'Here is a great big long amount of very dull text which needs to be persisted into a file by means of the fucntinos in this module'
     writeToFile(text)
+    # NB this is all text (the default) we can also handle bytes (  bytes('This will be bytes') )

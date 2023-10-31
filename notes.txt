@@ -20,10 +20,12 @@ You will need:
 Python code lives in classes (or in functions), in modules, which live in packages (folders)
 
 Tuesday
-- fifo
+> fifo
+- we can also persist data in Database, remote API, microserver etc.
 - architecture: modules, packages, import, design patterns
 - requests (needs setting up)
 - lab exercise
+- sys and arguments
 
 
 
