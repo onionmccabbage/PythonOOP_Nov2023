@@ -1,4 +1,4 @@
-OOP Python Review 2
+OOP Python Review 2  until at least 3:00
 ===================
 Use the following API to get a very large number of 'posts':
   http://jsonplaceholder.typicode.com/posts
@@ -6,12 +6,13 @@ Use the following API to get a very large number of 'posts':
 Write a module which will retrieve the JSON data for all the 'posts'
 The retrieved JSON should be stored in a list ( resonse.json() )
 Iterate over the retrieved list of posts, and populate a text file
+(you would probably use 'while')
 
 You could just write each 'post' into the file, 
 or you could try to nicely format the data before writing it
 
 In another module, ask the user which userId they are interested in 
-Then retrieve and display all the 'posts' for that userId (use a 'WHERE' clause in the SQL)
+Then retrieve and display all the 'posts' for that userId (from the API)
 (You will need to validate that the userId is a positive integer within bounds)
 
 Architecture:
@@ -33,6 +34,6 @@ Retrieve all the todos and set them to completed=True before persisting in a fil
 
 Super Optional:
 Find a way to write your data into byte files rather than text
-e.g. fout = open('filenam', 'ab') # to append bytes
-Remember ot convert the text to bytes
+e.g. fout = open('filename', 'ab') # to append bytes
+Remember to convert the text to bytes
 e.g. t_b = bytes(t)
