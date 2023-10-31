@@ -25,7 +25,6 @@ def getUserPosts():
         f.writeToFile(posts_file, f'{post}')
         f.writeToFile(posts_file, '\n')
 
-
 def main():
     # getAllPosts()
     getUserPosts()

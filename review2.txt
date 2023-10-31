@@ -1,4 +1,4 @@
-OOP Python Review 2 ...until 3:30
+OOP Python Review 2
 ===================
 Use the following API to get a very large number of 'posts':
   http://jsonplaceholder.typicode.com/posts
