@@ -23,9 +23,9 @@ Tuesday
 > fifo
 - we can also persist data in Database, remote API, microserver etc.
 - architecture: modules, packages, import, design patterns
-- requests (needs setting up)
-- lab exercise
-- sys and arguments
+> requests (needs setting up)
+> lab exercise
+> sys and arguments
 - decorator pattern
 - ways to run python
 
