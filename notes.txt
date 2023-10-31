@@ -19,6 +19,14 @@ You will need:
 
 Python code lives in classes (or in functions), in modules, which live in packages (folders)
 
+Tuesday
+- fifo
+- architecture: modules, packages, import, design patterns
+- requests (needs setting up)
+- lab exercise
+
+
+
 - intro and welcome
   - what do you currently know
   - what do you want to know
