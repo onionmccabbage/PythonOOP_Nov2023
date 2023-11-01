@@ -1,0 +1,45 @@
+Python Review Exercise 3
+========================
+For this project, use modules and imports to separate your code structures
+In a new Python module, declare a 'WeatherGetter' class
+Initialize it to take a 'city' parameter which defaults to 'hull'. 
+Dont forget to import requests
+
+In a method of your class call 'requests.get()' for this end-point:
+  http://api.openweathermap.org/data/2.5/weather?q={self.city}&units=metric&APPID=957d663a2296945e39a56609740a2548
+  (inject the city parameter)
+You may choose to sign up for a free API key, or use my API key, good for 60 requests/min
+Write some code to exercise your 'WeatherGetter' class (just print the results) 
+
+Next, in another module write a 'Weather' class with validated properties
+for 'lat', 'lon' and 'temperature' (all are floating point numbers)
+
+Modify the server to check if the client request is a city name
+i.e. is it one of a collection of city names, e.g. this tuple:
+('southampton', 'hull', 'bristol', 'watford', 'dublin') # add you own ideas
+
+If the server has received a recognized city name, it should call the 'WeatherGetter'
+and then populate an instance of the 'Weather' model with some of the data
+
+e.g.
+  self.coord = (coord[lat], coord[lon])  # make a tuple
+  self.temperature = data['main']['temp']  # access the temperature property from the JSON
+
+The server then encodes the model and send it back to the client
+
+The client show the weather
+
+Remember to code against the main types of error that might occur here
+
+Optional
+--------
+Also show other weather data, such as wind speed and direction, the weather description etc.
+Show the temperature as Celcius (the default), Kelvin (-273) and Fahrenheit (°F=°C*1.8+32.0)
+
+Try retrieving a lot of cities (but be careful of the 60-a-minute limit):
+Here is a tuple of many of the cities of Ireland:
+("Dublin","Cork","Limerick","Galway","Waterford","Drogheda","Kilkenny","Wexford","Sligo","Clonmel","Dundalk","Bray","Ennis","Tralee","Carlow","Naas","Athlone","Letterkenny","Tullamore","Killarney","Arklow","Cobh","Castlebar","Midleton","Mallow","Ballina","Enniscorthy","Wicklow","Cavan","Athenry","Longford","Dungarvan","Nenagh","Trim","Thurles","Youghal","Monaghan","Buncrana","Ballinasloe","Fermoy","Westport","Carrick-on-Suir","Birr","Tipperary","Carrickmacross","Kinsale","Listowel","Clonakilty","Cashel","Macroom","Castleblayney","Kilrush","Skibbereen","Bundoran","Templemore","Clones","Newbridge","Mullingar","Balbriggan","Greystones","Leixlip","Tramore","Shannon","Gorey","Tuam","Edenderry","Bandon","Loughrea","Ardee","Mountmellick","Bantry","Boyle","Ballyshannon","Cootehill","Ballybay","Belturbet","Lismore","Kilkee","Granard")
+
+Try This
+--------
+Store retrieved weather data as a text file, including 'lon', 'lat' and 'teperature'
