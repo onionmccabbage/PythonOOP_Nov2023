@@ -11,5 +11,9 @@ v = (n**2 for n in range(-10, 11, 2))
 print(v)
 # we can iterate over a generator to comprehensively deal with every member
 # this is called comprehension
-for item in v:
+print(v.__next__()) # 100
+
+for item in v: # carry on the values
     print(item)
+
+print(v.__next__()) # nope - the generator is exhausted

@@ -13,9 +13,12 @@ if __name__ == '__main__':
     results = map(isOdd, range(-10, 11)) # start, stop-before
     print( type(results) ) # we have a 'map' object
     # we can iterate over the map object
+    print(results.__next__())
     for r in results:
         print(f'Odd: {r}')
 
+
     matching = filter(isOdd, range(-10, 11))
+    print( matching.__next__() )
     for m in matching:
         print(m, end=", ") # we can change the default end-character for 'print'
