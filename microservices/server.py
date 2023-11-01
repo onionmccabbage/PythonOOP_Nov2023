@@ -16,8 +16,13 @@ def MyServer():
     while True:
         # begin responding  to requests
         (client, addr) = server.accept()
-        print(client, addr) # not actually useful - except debug
+        # print(client, addr) # not actually useful - except debug
+        # echo back whatever the client sent as an upper-case string
+        buf = client.recv(1024) # the first 1024 bytes of the request
         # break
+        resp = buf.decode().upper() # force to upper case
+        print(f'Server received {buf} and will send {resp}')
+        client.send(resp.encode())
 
 if __name__ == '__main__':
     MyServer()
