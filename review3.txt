@@ -20,6 +20,7 @@ i.e. is it one of a collection of city names, e.g. this tuple:
 
 If the server has received a recognized city name, it should call the 'WeatherGetter'
 and then populate an instance of the 'Weather' model with some of the data
+(you could print that, or stick it in a file or ...)
 
 e.g.
   self.coord = (coord[lat], coord[lon])  # make a tuple
@@ -42,4 +43,4 @@ Here is a tuple of many of the cities of Ireland:
 
 Try This
 --------
-Store retrieved weather data as a text file, including 'lon', 'lat' and 'teperature'
+Store retrieved weather data as a text file, including 'lon', 'lat' and 'temperature'
