@@ -11,7 +11,7 @@ class MicroServer():
     @config.setter
     def config(self, new_config):
         '''must be a tuple containing a non-empty string and a positive integer'''
-        if type(new_config)==tuple and type(new_config[0])==str and new_config[0]!='' and type(new_config[1])==int and new_config>0:
+        if type(new_config)==tuple and type(new_config[0])==str and new_config[0]!='' and type(new_config[1])==int and new_config[1]>0:
             self.__config = new_config
         else:
             raise TypeError('the configuration is wrong')            
