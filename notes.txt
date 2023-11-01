@@ -36,6 +36,7 @@ Weds
 - packages
 - microservices
 - lab exercise
+- if time - threads
 
 - intro and welcome
   - what do you currently know

@@ -11,7 +11,8 @@ def MyServer():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     config_t = ('localhost', 9874)
     server.bind(config_t) # our server knows which IP address and port is should use
-    server.listen() # our server begins listening for requests
+    # we can make a judgement as to how manyclients we might handle
+    server.listen(4) # our server begins listening for requests
     # we need our serve to continue indefinitely - a run loop
     while True:
         # begin responding  to requests
@@ -19,9 +20,11 @@ def MyServer():
         # print(client, addr) # not actually useful - except debug
         # echo back whatever the client sent as an upper-case string
         buf = client.recv(1024) # the first 1024 bytes of the request
-        # break
+        if buf == b'quit':
+            break
         resp = buf.decode().upper() # force to upper case
         print(f'Server received {buf} and will send {resp}')
+
         client.send(resp.encode())
 
 if __name__ == '__main__':
