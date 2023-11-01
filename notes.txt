@@ -30,9 +30,9 @@ Tuesday
 > ways to run python
 
 Weds
-- functional programming
+> functional programming
 - if time see Jupyter
-- override builtins
+- override built-ins
 - packages
 - microservices
 - lab exercise
