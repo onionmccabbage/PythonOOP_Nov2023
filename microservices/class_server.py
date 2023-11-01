@@ -1,10 +1,16 @@
 import socket # this lets us make clients and services
+from cities import cities_tup
+from weather_class import Weather
+from weather_getter import WeatherGetter
+
+
 
 class MicroServer():
     '''a server which responds to requests'''
     def __init__(self, config=('localhost', 9874)): # we expect a tuple
         # we can validate the incoming config
         self.config = config
+        self.weatherGetter = WeatherGetter
     @property
     def config(self):
         return self.__config 
@@ -29,13 +35,26 @@ class MicroServer():
             # print(client, addr) # not actually useful - except debug
             # echo back whatever the client sent as an upper-case string
             buf = client.recv(1024) # the first 1024 bytes of the request
-            if buf == b'quit':
+            req = buf.decode()
+            if req == 'quit':
                 break
-            resp = buf.decode().upper() # force to upper case
-            print(f'Server received {buf} and will send {resp}')
-
+            # do we have an acceptable city name?
+            if req in cities_tup:
+                data = wg.getWeather(req) # use a global instance of the WeatherGetter class
+                # make a weather model instance
+                lat = data['coord']['lat']
+                lon = data['coord']['lon']
+                tem = data['main']['temp']
+                w = Weather(lat, lon, tem) # we have an instance of a weather model
+                # now send a nice string nack to the client
+                w_s = f'lat:{w.lat} lon:{w.lon} temp:{w.temperature}'
+                resp = w_s
+            else:
+                resp = buf.decode().upper() # force to upper case
+                print(f'Server received {buf} and will send {resp}')
             client.send(resp.encode())
 
 if __name__ == '__main__':
+    wg = WeatherGetter()
     s = MicroServer() # we could inject a config tuple
-    s.MyServer() # the server si now running
+    s.MyServer() # the server is now running
