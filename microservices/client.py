@@ -8,6 +8,10 @@ def MyClient():
     # send a message ot the server
     msg = 'hello'
     cli.send(msg.encode()) # we are obliged to encode anything passed over http
+    # we can choose to handle any respoinse from the server
+    response = cli.recv(1024)
+    print(f'Client received {response}') # bytes
+    cli.close() # a good idea to tidy up
 
 if __name__ == '__main__':
     MyClient()
