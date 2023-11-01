@@ -29,9 +29,13 @@ def writeToFile(t):
                 fout.write(part) # write just 12 characters
                 offset += chunk
         fout.close() # always a good idea to tidy up
+    except FileExistsError as fe:
+        print(f'The file already exists {fe}')  
+    except TypeError as te:
+        print('')  
     except Exception as err:
         '''typically we would write our exceptino to a log file'''
-        print(f'Something wemt wrong {err}')
+        print(f'Something went wrong {err}')
 
 
 if __name__ == '__main__':

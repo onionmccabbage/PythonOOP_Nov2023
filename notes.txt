@@ -22,40 +22,45 @@ Python code lives in classes (or in functions), in modules, which live in packag
 Tuesday
 > fifo
 - we can also persist data in Database, remote API, microserver etc.
-- architecture: modules, packages, import, design patterns
+> architecture: modules, packages, import, design patterns
 > requests (needs setting up)
 > lab exercise
 > sys and arguments
-- decorator pattern
+> decorator pattern
 > ways to run python
 
 Weds
 - functional programming
 - if time see Jupyter
-
+- override builtins
+- packages
+- microservices
+- lab exercise
 
 - intro and welcome
   - what do you currently know
   - what do you want to know
--	Overview of terms and ideas: The jargon of OOP
--	OOP thinking: Where OOP is useful and used
+>	Overview of terms and ideas: The jargon of OOP
+>	OOP thinking: Where OOP is useful and used
 -	Efficiency Gains from OOP
--	Why OOP is so popular:
+>	Why OOP is so popular:
   -	Modular code advantages
   -	Working across teams
+  - testable
+  - reusable
 -	What is meant by an Object: Objects, properties and method
 -	Common approaches to developing Objects
--	Data Types: Ensuring compliance to expectations
--	Data collections and structures
+>	Data Types: Ensuring compliance to expectations
+>	Data collections and structures
 -	Inheritance and Implementation: How objects can inherit
--	Constructor and super
--	Implementing an interface
--	Encapsulation
--	Restricting direct access to object components
--	Getter and Setter patterns
+>	Constructor (__init__)  and super
+>	Implementing an interface (abstract base class)
+>	Encapsulation
+>	Restricting direct access to object components
+>	Getter and Setter patterns
 -	Mutability
 -	More OOP Concepts
--	Polymorphism
+>	Polymorphism
 -	Duck Typing
 
 Other Useful Resources
@@ -65,4 +70,8 @@ Other Useful Resources
 - https://www.geeksforgeeks.org/python-exercises-practice-questions-and-solutions/
 - https://www.practicepython.org/exercises/
 - https://www.learnpython.org/
+
+
+End of course feedback
+  https://frameworktraining.typeform.com/to/o4ardlIy
 
