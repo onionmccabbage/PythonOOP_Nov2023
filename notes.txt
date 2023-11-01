@@ -32,10 +32,11 @@ Tuesday
 Weds
 > functional programming
 - if time see Jupyter
-- override built-ins
-- packages
-- microservices
-- lab exercise
+> override built-ins __str__ __repr__ __del__ __enter__ __exit__
+
+> packages
+> microservices
+> lab exercise
 - if time - threads
 
 - intro and welcome
