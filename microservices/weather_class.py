@@ -35,4 +35,6 @@ class Weather():
 
 if __name__ == '__main__':
     w = Weather(1.2, 2.1, 13)
+    # duck typing - if it looks and behaves like a duck - its a duck!!
+    other = {'lat':0.0, 'lon':0.0, 'temperature':12}
     print(w)

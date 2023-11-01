@@ -31,7 +31,7 @@ Tuesday
 
 Weds
 > functional programming
-- if time see Jupyter
+> if time see Jupyter
 > override built-ins __str__ __repr__ __del__ __enter__ __exit__
 
 > packages
@@ -50,20 +50,20 @@ Weds
   -	Working across teams
   - testable
   - reusable
--	What is meant by an Object: Objects, properties and method
--	Common approaches to developing Objects
+>	What is meant by an Object: Objects, properties and method
+>	Common approaches to developing Objects
 >	Data Types: Ensuring compliance to expectations
 >	Data collections and structures
--	Inheritance and Implementation: How objects can inherit
+>	Inheritance and Implementation: How objects can inherit
 >	Constructor (__init__)  and super
 >	Implementing an interface (abstract base class)
 >	Encapsulation
 >	Restricting direct access to object components
 >	Getter and Setter patterns
--	Mutability
--	More OOP Concepts
+>	Mutability
+>	More OOP Concepts
 >	Polymorphism
--	Duck Typing
+>	Duck Typing
 
 Other Useful Resources
 - https://pynative.com/python-exercises-with-solutions/
