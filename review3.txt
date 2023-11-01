@@ -1,4 +1,4 @@
-Python Review Exercise 3 until tea break at 3:00
+Python Review Exercise 3
 ========================
 For this project, use modules and imports to separate your code structures
 In a new Python module, declare a 'WeatherGetter' class
@@ -27,6 +27,8 @@ e.g.
   self.temperature = data['main']['temp']  # access the temperature property from the JSON
 
 The server then encodes the model and sends it back to the client
+- can't encode a class
+- reember - every class has a __dict__
 
 The client shows the weather
 

@@ -2,15 +2,14 @@ import socket # this lets us make clients and services
 from cities import cities_tup
 from weather_class import Weather
 from weather_getter import WeatherGetter
-
-
+import json
 
 class MicroServer():
     '''a server which responds to requests'''
     def __init__(self, config=('localhost', 9874)): # we expect a tuple
         # we can validate the incoming config
         self.config = config
-        self.weatherGetter = WeatherGetter
+        # self.weatherGetter = WeatherGetter or use a global isntance
     @property
     def config(self):
         return self.__config 
@@ -46,9 +45,10 @@ class MicroServer():
                 lon = data['coord']['lon']
                 tem = data['main']['temp']
                 w = Weather(lat, lon, tem) # we have an instance of a weather model
-                # now send a nice string nack to the client
+                # now send a nice string back to the client
+                w_d = json.dumps(w.__dict__)
                 w_s = f'lat:{w.lat} lon:{w.lon} temp:{w.temperature}'
-                resp = w_s
+                resp = w_d
             else:
                 resp = buf.decode().upper() # force to upper case
                 print(f'Server received {buf} and will send {resp}')
