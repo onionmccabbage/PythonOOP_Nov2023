@@ -24,15 +24,15 @@ if __name__ == '__main__':
     ''' we can target ANY function to be run as a new thread'''
     t1 = Thread(target=someFn, args=(1,)) # a one member tuple
     t2 = Thread(target=someFn, args=(2,)) # a one member tuple
-    t1.start()
-    t2.start()
-    # it is a good idea to join threads
-    t1.join()
-    t2.join()
     # use our class threads
     c1 = SomeClass('A')
     c2 = SomeClass('B')
+    t1.start()
+    t2.start()
     c1.start()
     c2.start()
+    # it is a good idea to join threads
+    t1.join()
+    t2.join()
     c1.join()
     c2.join()
